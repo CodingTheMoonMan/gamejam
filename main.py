@@ -1,7 +1,9 @@
+import secrets
 import pygame
+import visual.he
 
 pygame.init()
-screen = pygame.display.set_mode((1024,768))
+screen = pygame.display.set_mode((576,720))
 clock = pygame.time.Clock()
 running = True
 
@@ -16,7 +18,8 @@ while running:
     screen.fill("white")
 
     # RENDER YOUR GAME HERE
-
+    visual.he.draw(screen)
+    
     # flip() the display to put your work on screen
     pygame.display.flip()
 
