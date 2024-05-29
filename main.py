@@ -1,9 +1,12 @@
+import secrets
 import pygame
+import visual.he
 import player
 
 pygame.init()
-screen_height = 768
-screen = pygame.display.set_mode((1024,screen_height))
+screen_height = 720
+screen_width = 576
+screen = pygame.display.set_mode((screen_width,screen_height))
 clock = pygame.time.Clock()
 running = True
 
@@ -23,6 +26,9 @@ while running:
     screen.fill("white")
 
     # RENDER YOUR GAME HERE
+    
+    visual.he.draw(screen)
+    
     player_obj = player.Rect_obj(512, 400 + y_pos, 50, 70, (180, 70, 70), screen)
     player_obj.draw()
     
